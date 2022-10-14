@@ -8,11 +8,15 @@ Fonts are separated by a & */
     max-width: 1600px;
     margin: 0 auto;
 }
+nav {
+    margin-top: 25px;
+}
 nav a {
     text-align: center;
     color: #c4e0f7;
     text-decoration: none;
-    padding: 35px;
+    padding: 25px;
+    margin: 50px;
 }
 nav a:hover {
     background-color: #00c8fe;
@@ -52,6 +56,8 @@ body {
 }
 header {
     background-color: hsl(209, 73%, 54%);
+    padding-bottom: 50px;
+    padding-top: 25px;
 }
 .book {
     background-color: #001794;
@@ -100,6 +106,7 @@ footer a:hover {
 }
 #hero-img {
     width: 100%;
+    margin-top: 50px;
 }
 footer p a:hover{
     font-size: 1.2em;
