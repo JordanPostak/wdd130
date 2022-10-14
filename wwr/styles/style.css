@@ -1,3 +1,9 @@
+/* if you are using any Google fonts change the font names below to your fonts. 
+Any spaces in your font name should be replaced with a +. 
+Fonts are separated by a & */
+@import url('https://fonts.googleapis.com/css2?family=IM+Fell+French+Canon&family=Lato:ital,wght@0,400;0,700;1,400&display=swap');
+
+
 #content{
     max-width: 1600px;
     margin: 0 auto;
@@ -6,6 +12,7 @@ nav a {
     text-align: center;
     color: #c4e0f7;
     text-decoration: none;
+    padding: 35px;
 }
 nav a:hover {
     background-color: #00c8fe;
@@ -13,6 +20,8 @@ nav a:hover {
 }
 .home-title {
     color: #001794;
+    font-size: 2em;
+
 }
 h4 {
     color: #001794;
@@ -32,9 +41,14 @@ main section{
 #background {
     height: 725px;
     background-color: #001794;
+    margin: 50px;
 }
 body {
     background-color: #c4e0f7; 
+    font-family: Lato, Helvetica, sans-serif;
+    font-size: 22px;
+    margin: 0;
+    padding: 0;
 }
 header {
     background-color: hsl(209, 73%, 54%);
@@ -43,11 +57,15 @@ header {
     background-color: #001794;
     color: hsl(209, 73%, 54%);
     text-decoration: none;
+    padding: 15px 30px;
+    border-radius: 5px
 }
 .join {
     background-color: #001794;
     color: hsl(209, 73%, 54%);
     text-decoration: none;
+    padding: 15px 30px;
+    border-radius: 5px
 }
 .book:hover {
     background-color: #fe9f00;
@@ -74,10 +92,11 @@ footer a:hover {
     color:#fe9f00
 }
 .logo {
-    width: 80px;
+    width: 150px;
 }
 .icon {
     width: 80px;
+    padding-top: 10px;
 }
 #hero-img {
     width: 100%;
@@ -85,4 +104,39 @@ footer a:hover {
 footer p a:hover{
     font-size: 1.2em;
     text-decoration: underline;
+}
+.msg {
+    background-color: hsl(209, 73%, 54%);;
+    line-height: 1.5em;
+    padding: 35px;
+    margin: 50px;
+}
+.msg p {
+    padding-bottom: 15px;
+}
+  h2 {
+    margin: 0;
+}
+#logo_link {
+    padding-top: 5px;
+}
+footer {
+    padding: 25px 50px;
+}
+footer .social img   {
+    padding-top: 15px;
+}
+.card-img {
+    border: 10px solid #fe9f00;
+    margin-top: 100px;
+    
+}
+main section img {
+    box-sizing: border-box;
+}
+#hero {
+    padding-bottom: 25px;
+}
+.mountains {
+    margin: 50px;
 }
