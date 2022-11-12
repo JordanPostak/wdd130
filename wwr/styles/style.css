@@ -178,6 +178,10 @@ body {
     background-color: #fe9f00;
     color: #001794;
 }
+.email:hover {
+    background-color: #fe9f00;
+    color: #001794;
+}
 .join:hover {
     background-color: #fe9f00;
     color: #001794;
@@ -220,6 +224,7 @@ body {
 .photo-img:hover {
     transform: scale(1.8);
     border: 10px solid #fe9f00;
+    
 }
 .photo-img {
     width: 100%;
