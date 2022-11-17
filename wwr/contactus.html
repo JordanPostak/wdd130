@@ -26,19 +26,51 @@
                 </div>
                 <section id="contact-title-msg">
                     <h1 class="contact-title"> Rapid Paradise Contact Us Page</h1>
-                    <h4>Send us an email by clicking on the button below</h4>
-                    <div class='button-box'>
-                        <a class='email' href="email.html">Email</a>
-                    </div>
+                    <h4>Send us an email!</h4>
                 </section>
             </div>
             <main class="contact-grid">
                 <section class="contact-msg">
                     <h2>Contact Us</h2>
-                    <p>There are a few ways to contact us. Be sure to have your specific requests or compliments ready and on hand.</p>
-                    <p>Click on the button above to be directed to an email service which will allow you to send an email directly to us.</p>
-                    <p>Another option is by phone. My name is Jordan, and you can call me directly at 1-801-814-4559</p>
-                    <p>We thank you for contacting us.</p>
+                    <p>Have specific requests or compliments for us? No problem, send us a message below!</p>
+                    <div id="feedback"></div>
+                    <form action="/my-handling-form-page" method="post">
+                        <ul>
+                          <li>
+                            <label for="name">Name:</label>
+                            <input type="text" id="name" name="user_name" />
+                          </li>
+                          <li>
+                            <label for="mail">E-mail:</label>
+                            <input type="email" id="mail" name="user_email" />
+                          </li>
+                          <li>
+                            <label for="msg">Message:</label>
+                            <textarea id="msg" name="user_message"></textarea>
+                          </li>
+                          <li class="button">
+                            <button type="submit">Send your message</button>
+                          </li>
+                        </ul>
+                      </form>
+                      <script>
+                        // get the feedback div element so we can do something with it.
+                        const feedbackElement = document.getElementById('feedback');
+                        // get the form so we can read what was entered in it.
+                        const formElement = document.forms[0];
+                        // add a 'listener' to wait for a submission of our form. When that happens run the code below.
+                        formElement.addEventListener('submit', function(e) {
+                            // stop the form from doing the default action.
+                            e.preventDefault();
+                            // set the contents of our feedback element to a message letting the user know the form was submitted successfully. Notice that we pull the name that was entered in the form to personalize the message!
+                            feedbackElement.innerHTML = 'Hello '+ formElement.user_name.value +'! Thank you for your message. We will get back with you as soon as possible!';
+                            // make the feedback element visible.
+                            feedbackElement.style.display = "block";
+                            // add a class to move everything down so our message doesn't cover it.
+                            document.body.classList.toggle('moveDown');
+                            });
+                    </script>  
+                    <p>Thank you for contacting us.</p>
                 </section>
             </main>
             <footer>

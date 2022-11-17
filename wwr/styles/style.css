@@ -375,7 +375,9 @@ main section img {
     grid-column: 2/9;
     grid-row: 7/10;
 }
-
+.contact-msg h2 {
+    padding-bottom: 25px;
+}
 .contact-msg p {
     background-color: #c4e0f7;
     padding: 35px;
@@ -406,7 +408,109 @@ footer p a:hover{
     font-size: 1.2em;
     text-decoration: underline;
 }
+form {
+/* Center the form on the page */
+margin: 0 auto;
+width: 0 auto;
+/* Form outline */
+background-color: #c4e0f7;
+padding: 35px;
+box-shadow: 5px 5px 10px #27374e;
+border-radius: 25px;
+}
 
+ul {
+list-style: none;
+padding: 0;
+margin: 0;
+}
+
+form li + li {
+margin-top: 1em;
+}
+
+label {
+/* Uniform size & alignment */
+display:inline-block;
+width: 90px;
+text-align: right;
+font: 0.8em "typewriter", sans-serif
+}
+
+input,
+textarea {
+/* To make sure that all text fields have the same font settings
+    By default, textareas have a monospace font */
+font: 1em sans-serif;
+width: 20%;
+border-radius: 5px;
+/* Uniform text field size */
+width: 300px;
+box-sizing: border-box;
+
+/* Match form field borders */
+border: 1px solid #001794;
+
+
+}
+
+input:focus,
+textarea:focus {
+/* Additional highlight for focused elements */
+border-color: #fe9f00;
+}
+
+textarea {
+/* Align multiline text fields with their labels */
+vertical-align: top;
+
+/* Provide space to type some text */
+height: 5em;
+}
+
+.button {
+/* Align buttons with the text fields */
+padding-left: 0px; /* same size as the label elements */
+}
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+}
+button {
+    padding: 15px;
+    font: bold 0.6em sans-serif;
+    border: 3px solid #001794;
+    border-radius: 5px;
+    background: none;
+    cursor: pointer;
+    transform: rotate(-1.5deg);
+    color: #001794;
+}
+button:after {
+    content: " >>>";
+  }
+button:hover,
+button:focus {
+  outline: none;
+  background: #fe9f00;
+  color: #001794;
+}
+#feedback {
+    background-color: #fe9f00;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: .5em;
+    /* make this element invisible until we are ready for it */
+    display: none;      
+    }
+.moveDown {
+    margin-top: 3em;
+}
 
 @media screen and (max-width: 900px) {
     #hero, .home-grid {
@@ -416,6 +520,19 @@ footer p a:hover{
     #photo, .photo-grid {
         display: block;
         height: auto;
+    }
+    button{
+        display: block;
+        height: auto;
+        width: 100%;
+        position: center;
+        margin: 0;
+    }
+    input,
+    textarea {
+        display: block;
+        height: auto;
+        width: 100%;
     }
     nav, footer {
         flex-direction: column;
