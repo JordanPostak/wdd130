@@ -338,6 +338,7 @@ footer p a:hover {
 #home-page-collage, .home-page-grid {
     display: block;
     height: auto;
+}    
 }
 nav, footer {
     flex-direction: column;
