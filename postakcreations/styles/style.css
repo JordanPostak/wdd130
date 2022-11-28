@@ -50,12 +50,12 @@ body {
     font-family: IM Fell French Canon, Lato, Helvetica, sans-serif;
     font-size: 32px;
 }
-#home-page-collage {
+#home-page-collage, #beads-page-collage, #knots-page-collage {
     display: grid;
     grid-template-columns: 1fr 3fr 1fr;
     margin-top: -85px;
 }
-#home-page-box {
+#home-page-box, #knots-page-box, #beads-page-box {
     grid-column: 1/12;
     grid-row: 1/8;
     z-index: -1;
@@ -64,25 +64,32 @@ body {
     grid-column: 2/4;
     grid-row: 5/6;
     transform: rotate(-23deg);
-    
-}
-#home-page-title-msg h1{
+}  
+#knots-page-title-msg, #beads-page-title-msg {
+    grid-column: 1/4;
+    grid-row: 3/6;
+    background-color: rgba(255, 255, 255, 0.8);
+    margin-top: 50px;
+    margin-left: 300px;
+    margin-right: 300px;
+}      
+#home-page-title-msg h1 {
     text-align: center;
     margin-top: 100px;
 }
-#home-page-title-msg h4{
+#knots-page-title-msg h1, #beads-page-title-msg h1{
+    text-align: center;
+}
+#home-page-title-msg h4, #knots-page-title-msg h4, #beads-page-title-msg h4{
     text-align: center;
     color: #023e8a;
     margin-top: -50px;
 }
-#home-page-img {
+#home-page-img, #knots-page-img, #beads-page-img {
     width: 100%;
+    margin-top: -25px;
 }
-.button-box{
-    text-align: center;
-    margin-top: 30px;
-}
-.home-page-title {
+.home-page-title, .knots-page-title, .beads-page-title {
     color: #fe9f00;
     font-size: 2em;
 }
@@ -90,17 +97,21 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 }
-.home-page-background {
+.knots-page-grid, .beads-page-grid {
+    display: block;
+}
+.home-page-background, .knots-page-msg, .beads-page-msg {
     background-color:#023e8a;
     padding: 20px;
-    grid-column: 1/11;
+    grid-column-start: 1;
+    grid-column-end: 11;
     border-radius: 25px;
     margin: 50px;
     margin-top: 50px;
     margin-bottom: 25px;
 
 }
-.home-page-background p{
+.home-page-background p, .knots-page-msg p, .beads-page-msg p{
     color: #023e8a;
     background-color:#c4e0f7;
     padding: 25px;
@@ -110,7 +121,7 @@ body {
     text-align: center;
 
 }
-.home-page-background h2{
+.home-page-background h2, .knots-page-msg h2, .beads-page-msg h2{
     background-color:#c4e0f7;
     color: #fe9f00;
     border-radius: 25px;
@@ -129,7 +140,6 @@ body {
     margin-right: 25px;
     border-radius: 25px;
 }
-
 .home-page-knots-background h1 {
     background-color:#c4e0f7;
     color: #fe9f00;
@@ -212,126 +222,149 @@ footer p a:hover {
     font-size: 1.2em;
     text-decoration: underline;
 }
-
+.double-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
 /* {box-sizing:border-box}
 
 /* Slideshow container */
-.slideshow-container {
-  max-width: 1000px;
-  position: relative;
-  margin: auto;
+.slideshow-container1, .slideshow-container2, .slideshow-container3,  .slideshow-container4, .slideshow-container5, .slideshow-container6 {
+    max-width: 100%;
+    position: relative;
+    background-color:#023e8a;
+    padding: 25px;
+    border-radius: 25px;
+    margin: 50px;
+}
+
+.slideshow-container1 p, .slideshow-container2 p, .slideshow-container3 p,  .slideshow-container4 p, .slideshow-container5 p, .slideshow-container6 p {
+    color: #023e8a;
+    background-color:#c4e0f7;
+    padding: 25px;
+    border-radius: 25px;
+    box-shadow: 5px 5px 10px #c4e0f7;
+    margin: 25px auto;
+    text-align: center;
 }
 
 /* Hide the images by default */
-.mySlides {
+.mySlides1, .mySlides2, .mySlides3, .mySlides4, .mySlides5, .mySlides6, .mySlides7, .mySlides8, .mySlides9, .mySlides10, .mySlides11  {
   display: none;
 }
-
+.active-slide {
+    display:block;
+}
 /* Next & previous buttons */
 .prev, .next {
   cursor: pointer;
   position: absolute;
   top: 50%;
   width: auto;
-  margin-top: -22px;
-  padding: 16px;
-  color: white;
+  padding: 10px;
+  margin-left: -26px;
+  color: #c4e0f7;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 35px;
   transition: 0.6s ease;
   border-radius: 0 3px 3px 0;
   user-select: none;
 }
-
 /* Position the "next button" to the right */
 .next {
   right: 0;
   border-radius: 3px 0 0 3px;
 }
-
 /* On hover, add a black background color with a little bit see-through */
 .prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
+    background-color: #fe9f00;
+	color: #023e8a;
 }
-
 /* Caption text */
 .text {
-  color: #f2f2f2;
-  font-size: 15px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
+  color: #fe9f00;
+  font-size: 35px;
+  padding: 20px 20px;
+  position: top;
+  bottom: 20px;
   width: 100%;
   text-align: center;
 }
-
 /* Number text (1/3 etc) */
 .numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
+  color: #c4e0f7;
+  font-size: 30px;
+  padding: 15px 15px;
+  position: bottom;
   top: 0;
 }
-
 /* The dots/bullets/indicators */
 .dot {
+  position: bottom;
   cursor: pointer;
   height: 15px;
   width: 15px;
-  margin: 0 2px;
+  margin-bottom: -50px;
   background-color: #bbb;
   border-radius: 50%;
   display: inline-block;
   transition: background-color 0.6s ease;
 }
-
 .active, .dot:hover {
   background-color: #717171;
 }
-
 /* Fading animation */
 .fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
   animation-name: fade;
   animation-duration: 1.5s;
 }
-
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
 @keyframes fade {
   from {opacity: .4}
   to {opacity: 1}
 }
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 900px) {
+    .prev, .next, .text {
+        font-size: 11px
+    }
 
 @media screen and (max-width: 900px) {
-    #home-page-collage, .home-page-grid {
-        display: block;
-        height: auto;
-    }
-    nav, footer {
-        flex-direction: column;
-    }
-    nav a {
-        display: block;
-        padding: 15px;
-    }
-    #home-page-collage {
-        margin-top: 0;
-    }
-    #home-page-title-msg {
-        margin-top: 0;
-    }
-    #home-page-title-msg h4 {
-        display: none;
-    }
-    .home-page-title {
-        font-size: 25px;
-        transform: rotate(23deg);
-    }
-    .home-page-background, .home-page-knots-background, .home-page-beads-background {
-        width: 80%;
-        display: block;
-        margin: 0 auto;
-    }
-    footer {
-        margin-top: 25px;
-    }
+#home-page-collage, .home-page-grid {
+    display: block;
+    height: auto;
+}
+nav, footer {
+    flex-direction: column;
+}
+nav a {
+    display: block;
+    padding: 15px;
+}
+#home-page-collage {
+    margin-top: 0;
+}
+#home-page-title-msg {
+    margin-top: 0;
+}
+#home-page-title-msg h4 {
+    display: none;
+}
+.home-page-title {
+    font-size: 25px;
+    transform: rotate(23deg);
+}
+.home-page-background, .home-page-knots-background, .home-page-beads-background {
+    width: 80%;
+    display: block;
+    margin: 0 auto;
+}
+footer {
+    margin-top: 25px;
+}
 }
