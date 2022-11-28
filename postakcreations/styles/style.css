@@ -335,7 +335,7 @@ footer p a:hover {
     }
 
 @media screen and (max-width: 900px) {
-#home-page-collage, .home-page-grid {
+#home-page-collage, .home-page-grid, .double-columns {
     display: block;
     height: auto;
 }    
