@@ -226,6 +226,9 @@ footer p a:hover {
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
+.pictureframe {
+    height: 650px;
+}
 /* {box-sizing:border-box}
 
 /* Slideshow container */
