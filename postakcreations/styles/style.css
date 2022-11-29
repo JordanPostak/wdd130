@@ -48,7 +48,7 @@ nav a:hover {
 body {
     background-color: #c4e0f7; 
     font-family: IM Fell French Canon, Lato, Helvetica, sans-serif;
-    font-size: 32px;
+    font-size: 25px;
 }
 #home-page-collage, #beads-page-collage, #knots-page-collage {
     display: grid;
