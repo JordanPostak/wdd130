@@ -41,9 +41,9 @@
                             <p>Here you will find instructions for what materials to use and what tools you need to obtain, even some good suggestions on where to obtain them.</p>
                             <!-- The dots/circles -->
                             <div style="text-align:center">
-                                <span class="dot" onclick="currentSlide(1, 0)"></span>
-                                <span class="dot" onclick="currentSlide(2, 0)"></span>
-                                <span class="dot" onclick="currentSlide(3, 0)"></span>
+                                <span class="dot1" onclick="currentSlide(1, 0)"></span>
+                                <span class="dot1" onclick="currentSlide(2, 0)"></span>
+                                <span class="dot1" onclick="currentSlide(3, 0)"></span>
                             </div>
                             <!-- Full-width images with number and caption text -->
                             <div class="mySlides1 fade">
@@ -73,9 +73,9 @@
                             <p>Here you will also find how to roll a circle design using clay.</p>
                             <!-- The dots/circles -->
                             <div style="text-align:center">
-                                <span class="dot" onclick="currentSlide(1, 1)"></span>
-                                <span class="dot" onclick="currentSlide(2, 1)"></span>
-                                <span class="dot" onclick="currentSlide(3, 1)"></span>
+                                <span class="dot2" onclick="currentSlide(1, 1)"></span>
+                                <span class="dot2" onclick="currentSlide(2, 1)"></span>
+                                <span class="dot2" onclick="currentSlide(3, 1)"></span>
                             </div>
                             <!-- Full-width images with number and caption text -->
                             <div class="mySlides2 fade">
@@ -105,9 +105,9 @@
                             <p>Here you will find instructions for using that circle design to make the center piece to a flower.</p>
                             <!-- The dots/circles -->
                             <div style="text-align:center">
-                                <span class="dot" onclick="currentSlide(1, 2)"></span>
-                                <span class="dot" onclick="currentSlide(2, 2)"></span>
-                                <span class="dot" onclick="currentSlide(3, 2)"></span>
+                                <span class="dot3" onclick="currentSlide(1, 2)"></span>
+                                <span class="dot3" onclick="currentSlide(2, 2)"></span>
+                                <span class="dot3" onclick="currentSlide(3, 2)"></span>
                             </div>
                             <!-- Full-width images with number and caption text -->
                             <div class="mySlides3 fade">
@@ -139,9 +139,9 @@
                             <p>Here you will also find instructions for how to turn the triangle design into flower pedals around your center piece.</p>
                             <!-- The dots/circles -->
                             <div style="text-align:center">
-                                <span class="dot" onclick="currentSlide(1, 3)"></span>
-                                <span class="dot" onclick="currentSlide(2, 3)"></span>
-                                <span class="dot" onclick="currentSlide(3, 3)"></span>
+                                <span class="dot4" onclick="currentSlide(1, 3)"></span>
+                                <span class="dot4" onclick="currentSlide(2, 3)"></span>
+                                <span class="dot4" onclick="currentSlide(3, 3)"></span>
                             </div>
                             <!-- Full-width images with number and caption text -->
                             <div class="mySlides4 fade">
@@ -171,9 +171,9 @@
                             <p>Here you will also find instructions for slicing your beads, adding holes, and baking them in the oven.</p>
                             <!-- The dots/circles -->
                             <div style="text-align:center">
-                                <span class="dot" onclick="currentSlide(1, 4)"></span>
-                                <span class="dot" onclick="currentSlide(2, 4)"></span>
-                                <span class="dot" onclick="currentSlide(3, 4)"></span>
+                                <span class="dot5" onclick="currentSlide(1, 4)"></span>
+                                <span class="dot5" onclick="currentSlide(2, 4)"></span>
+                                <span class="dot5" onclick="currentSlide(3, 4)"></span>
                             </div>
                             <!-- Full-width images with number and caption text -->
                             <div class="mySlides5 fade">
@@ -202,9 +202,9 @@
                         <div class="slideshow-container6">
                             <p>Here you will also find instructions on how to add a finish gloss to your beads.</p>
                             <div style="text-align:center">
-                                <span class="dot" onclick="currentSlide(1, 5)"></span>
-                                <span class="dot" onclick="currentSlide(2, 5)"></span>
-                                <span class="dot" onclick="currentSlide(3, 5)"></span>
+                                <span class="dot6" onclick="currentSlide(1, 5)"></span>
+                                <span class="dot6" onclick="currentSlide(2, 5)"></span>
+                                <span class="dot6" onclick="currentSlide(3, 5)"></span>
                             </div>
                             <!-- Full-width images with number and caption text -->
                             <div class="mySlides6 fade">
@@ -235,6 +235,7 @@
                 <script>
                     var slideIndex = [1,1,1,1,1,1];
                     var slideId = ["mySlides1", "mySlides2", "mySlides3", "mySlides4", "mySlides5", "mySlides6"]
+                    var dot = ["dot1", "dot2", "dot3", "dot4", "dot5", "dot6"]
                     showSlides(1, 0);
                     showSlides(1, 1);
                     showSlides(1, 2);
@@ -251,15 +252,21 @@
                     function showSlides(n, no) {
                       var i;
                       var x = document.getElementsByClassName(slideId[no]);
+                      var dots = document.getElementsByClassName(dot[no]);
                       if (n > x.length) {slideIndex[no] = 1}    
                       if (n < 1) {slideIndex[no] = x.length}
                       for (i = 0; i < x.length; i++) {
                          x[i].style.display = "none";  
                       }
-                      x[slideIndex[no]-1].style.display = "block";  
+                      for (i = 0; i < dots.length; i++) 
+                      {
+                      dots[i].className = dots[i].className.replace(" active", "");
+                      }
+
+                      x[slideIndex[no]-1].style.display = "block";
+                      dots[slideIndex[no]-1].className += " active"  
                     }
-                    
-                </script>             
+                    </script>            
             </main>
             <footer>
                 <p>Postak Creations &copy; 2022 - Jordan Postak</p>
