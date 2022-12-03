@@ -80,7 +80,6 @@ body {
     margin-right: 300px;
 }      
 #home-page-title-msg h1 {
-    text-align: top;
     margin-top: -360px;
 }
 #knots-page-title-msg h1, #beads-page-title-msg h1{
@@ -253,7 +252,7 @@ footer p a:hover {
     margin: 50px;
 }
 
-.slideshow-container1 p, .slideshow-container2 p, .slideshow-container3 p,  .slideshow-container4 p, .slideshow-container5 p, .slideshow-container6 p {
+.slideshow-container1 h2, .slideshow-container2 h2, .slideshow-container3 h2,  .slideshow-container4 h2, .slideshow-container5 h2, .slideshow-container6 h2 {
     color: #fe9f00;
     font-size: 1cm;
     background-color:#023e8a;
@@ -302,7 +301,6 @@ footer p a:hover {
   font-weight: bold;
   font-size: 35px;
   padding: 20px 20px;
-  position: top;
   bottom: 20px;
   width: 100%;
   text-align: center;
@@ -312,11 +310,9 @@ footer p a:hover {
   color: #023e8a;
   font-size: 30px;
   padding: 15px 15px;
-  position: bottom;
 }
 /* The dots/bullets/indicators */
 .dot1, .dot2, .dot3, .dot4, .dot5, .dot6 {
-  position: bottom;
   cursor: pointer;
   height: 15px;
   width: 15px;
