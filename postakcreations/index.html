@@ -1,36 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <link rel="icon" href="./images/postakcreations-logo.png">
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>"Postak Creations | Postak Creations Jewelry | Home"</title>
         <link rel="stylesheet" href="styles/style.css">
+        <style>
+        .parallax {
+        /* The image used */
+        background-image: url("./images/creation-background.jpg");
+
+        /* Set a specific height */
+        min-height: 500px; 
+
+        /* Create the parallax scrolling effect */
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        }
+        </style>
     </head>
-    <body>
+    <body class="parallax">
         <div id="content">
-            <header>
-                <a id="logo_link" href="index.html">
-                <img class="logo" src="images/postakcreations-logo.png" alt="Postak Creations logo"/>
-                </a>
-                <nav>
-                    <a href="index.html" target="_blank">Home</a> 
-                    <a href="knots.html" target="_blank">Knots</a>
-                    <a href="beads.html" target="_blank">Beads</a>
-                    <a href="contact.html" target="_blank">Contact Us</a>
-                </nav>
-            </header>
-            <div id="home-page-collage">
-                <div id="home-page-box">
-                    <img id="home-page-img" src="images/postakcreations_banner.png" alt="Postak Creations collage">
-                </div>
-                <section id="home-page-title-msg">
-                    <h1 class="home-page-title">Your one-stop how-to workshop!</h1>
-                    <h4>The best place to kick-start your creativity and start designing!</h4>
-                </section>
+        <div id="navbar">
+            <a id="logo_link" href="index.html">
+            <img class="logo" src="images/postakcreations-logo.png" alt="Postak Creations logo"/>
+            </a>
+            <a class="button" href="index.html" target="_blank">Home</a> 
+            <a class="button" href="knots.html" target="_blank">Knots</a>
+            <a class="button" href="beads.html" target="_blank">Beads</a>
+            <a class="button" href="contact.html" target="_blank">Contact Us</a>
+        </div>
+        <div id="home-page-collage">
+            <div id="home-page-box">
+                <img id="home-page-img" src="images/PostakCreationsBanner.png" alt="Postak Creations collage">
             </div>
+        </div>
             <main class="home-page-grid">
                 <section class="home-page-background">
+                    <h2>Your one-stop how-to workshop!</h2>
+                    <p>The best place to kick-start your creativity and start designing!</p>
+                </section>
+                <section class="home-page-background">  
                     <h2>Why Postak Creations?</h2>
                     <p>Isn't it a hassle to buy handmade jewelry online? Tired of never finding the right piece of jewelry? Never quite sure if it will fit once you buy it? How do you know if it’s really good quality? Well, if you are asking yourself these questions then this website is for you. Postak Creations will help you stretch your imagination to infinity and beyond</p>
                     <p>You see, everyone has different tastes as to what looks good and what doesn’t. You probably have your own ideas of what you are looking for. Why not create your own jewelry then? PostakCreations is a place you can come to you bring your creations to life.</p>
@@ -66,5 +80,19 @@
                 </div>
             </footer>
         </div>
+        <script>
+            window.onscroll = function() {myFunction()};
+            
+            var navbar = document.getElementById("navbar");
+            var sticky = navbar.offsetTop;
+            
+            function myFunction() {
+              if (window.pageYOffset >= sticky) {
+                navbar.classList.add("sticky")
+              } else {
+                navbar.classList.remove("sticky");
+              }
+            }
+        </script>
     </body>
 </html>

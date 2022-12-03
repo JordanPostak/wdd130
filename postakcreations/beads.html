@@ -1,37 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <link rel="icon" href="./images/postakcreations-logo.png">
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>"Postak Creations | Postak Creations Jewelry | Beads"</title>
         <link rel="stylesheet" href="styles/style.css">
+        <style>
+            .parallax {
+            /* The image used */
+            background-image: url("./images/creation-background.jpg");
+    
+            /* Set a specific height */
+            min-height: 500px; 
+    
+            /* Create the parallax scrolling effect */
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            }
+        </style>
     </head>
-    <body>
+    <body class="parallax">
         <div id="content">
-            <header>
+            <div id="navbar">
+                
                 <a id="logo_link" href="index.html">
-                <img class="logo" src="images/postakcreations-logo.png" alt="Rapid Paradise Image"/>
+                <img class="logo" src="images/postakcreations-logo.png" alt="Postak Creations logo"/>
                 </a>
-                <nav>
-                    <a href="index.html" target="_blank">Home</a> 
-                    <a href="knots.html" target="_blank">Knots</a>
-                    <a href="beads.html" target="_blank">Beads</a>
-                    <a href="contact.html" target="_blank">Contact Us</a>
-                </nav>
-            </header>
+                <a class="button" href="index.html" target="_blank">Home</a> 
+                <a class="button" href="knots.html" target="_blank">Knots</a>
+                <a class="button" href="beads.html" target="_blank">Beads</a>
+                <a class="button" href="contact.html" target="_blank">Contact Us</a>
+            </div>
             <div id="beads-page-collage">
+                
                 <div id="beads-page-box">
                     <img id="beads-page-img" src="images/beads_banner.JPG" alt="A multitude of bead designs">
                 </div>
-                <section id="beads-page-title-msg">
-                    <h1 class="beads-page-title">Postak Creations</h1>
-                    <h4>Learn how to shape your creativity!</h4>
-                </section>
             </div>
             <main class="beads-page-grid">
                 <section class="beads-page-msg">
                     <h2>Beads Page</h2>
+                    <p>Learn how to shape your creativity!</p>
                     <p>Interested in learning how to make beads? Congratulations you have made it to the right spot! Below there are different sets of step-by-step instructions complete with images. You are welcome to navigate through to each one to have a look.</p>
                 </section>
                 <section class="double-columns">
@@ -302,6 +315,20 @@
                       x[slideIndex[no]-1].style.display = "block";
                       dots[slideIndex[no]-1].className += " active"  
                     }
+                    </script>
+                    <script>
+                        window.onscroll = function() {myFunction()};
+                        
+                        var navbar = document.getElementById("navbar");
+                        var sticky = navbar.offsetTop;
+                        
+                        function myFunction() {
+                            if (window.pageYOffset >= sticky) {
+                            navbar.classList.add("sticky")
+                            } else {
+                            navbar.classList.remove("sticky");
+                            }
+                        }
                     </script>            
             </main>
             <footer>

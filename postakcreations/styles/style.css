@@ -7,53 +7,63 @@ Fonts are separated by a & */
 #content{
     max-width: 1600px;
     margin: 0 auto;
-}
-header {
-    background-color: #023e8a;
-    color: white;
-    padding: 5px; 
-    display: grid;
-    grid-template-columns: 150px auto;
-    background-color: #023e8a;
-    opacity: .9;
+    padding: 0px;
 }
 #logo {
-    padding-top: 5px;
-    margin-left: 20px;
-    justify-self: center;
-    align-self: center;
+    margin:0 auto;
 }
 #logo_link {
-    padding-top: 5px;
-    margin-left: 50px;
-    justify-self: center;
-    align-self: center;
+    margin:0 auto;
 }
-nav {
-    display: flex;
-    justify-content: space-around;
+#navbar {
+    overflow: hidden;
+    background-image: linear-gradient(to right, #023e8a,  #023e8a, #09e1f3);
+    color: white; 
+    display:block;
+    opacity: .9;
+    padding: 20px;
+    white-space: nowrap;
+    
 }
-nav a {
+
+.button {
+    border-style: outset;
+    border-color: #09e1f3;
+    background-color: #023e8a;
+    padding: 5px;
+}
+#navbar a {
     text-align: center;
     color: white;
     text-decoration: none;
-    padding: 25px;
+    margin: 80px;
+    vertical-align: middle;
+    
 }
-nav a:hover {
+#navbar a:hover {
     
     color: #fe9f00;
     font-size: 1.2em;
-    text-decoration: underline;
 }
+.sticky {
+    position: fixed;
+    display: block;
+    width: 1560px;
+    z-index: 10;
+    margin-top: -35px;
+    
+  }
+  .sticky + .content {
+    padding-top: 30px;
+  }
 body {
-    background-color: #c4e0f7; 
     font-family: IM Fell French Canon, Lato, Helvetica, sans-serif;
     font-size: 25px;
 }
 #home-page-collage, #beads-page-collage, #knots-page-collage {
     display: grid;
     grid-template-columns: 1fr 3fr 1fr;
-    margin-top: -85px;
+    margin-top: 35px;
 }
 #home-page-box, #knots-page-box, #beads-page-box {
     grid-column: 1/12;
@@ -61,36 +71,42 @@ body {
     z-index: -1;
 }
 #home-page-title-msg {
-    grid-column: 2/4;
+    grid-column: 1/4;
     grid-row: 5/6;
-    transform: rotate(-23deg);
 }  
 #knots-page-title-msg, #beads-page-title-msg {
     grid-column: 1/4;
     grid-row: 3/6;
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color:#023e8a;
+    border-radius: 25px;
     margin-top: 50px;
     margin-left: 300px;
     margin-right: 300px;
 }      
 #home-page-title-msg h1 {
-    text-align: center;
-    margin-top: 100px;
+    text-align: top;
+    margin-top: -360px;
 }
 #knots-page-title-msg h1, #beads-page-title-msg h1{
     text-align: center;
+    color:#09e1f3;
 }
-#home-page-title-msg h4, #knots-page-title-msg h4, #beads-page-title-msg h4{
+#home-page-title-msg h4 {
+    text-align: left;
+    color:#001794;
+    margin-top: -30px;
+}
+#knots-page-title-msg h4, #beads-page-title-msg h4{
     text-align: center;
-    color: #023e8a;
-    margin-top: -50px;
+    color:#fe9f00;
+    margin-top: -40px;
 }
 #home-page-img, #knots-page-img, #beads-page-img {
     width: 100%;
     margin-top: -25px;
 }
 .home-page-title, .knots-page-title, .beads-page-title {
-    color: #fe9f00;
+    color: #001794;
     font-size: 2em;
 }
 .home-page-grid {
@@ -101,7 +117,7 @@ body {
     display: block;
 }
 .home-page-background, .knots-page-msg, .beads-page-msg {
-    background-color:#023e8a;
+    background-image: linear-gradient(to right, rgba(196, 224, 247, .7), #09e1f3, rgba(196, 224, 247, .7));
     padding: 20px;
     grid-column-start: 1;
     grid-column-end: 11;
@@ -112,28 +128,28 @@ body {
 
 }
 .home-page-background p, .knots-page-msg p, .beads-page-msg p{
-    color: #023e8a;
-    background-color:#c4e0f7;
+    color: white;
+    background-color:#023e8a;
     padding: 25px;
     border-radius: 25px;
-    box-shadow: 5px 5px 10px #c4e0f7;
+    box-shadow: 5px 5px 10px #1e272f;
     margin: 25px auto;
     text-align: center;
 
 }
 .home-page-background h2, .knots-page-msg h2, .beads-page-msg h2{
-    background-color:#c4e0f7;
+    background-color:#023e8a;
     color: #fe9f00;
     border-radius: 25px;
     padding: 20px;
     width: 50%;
     margin: 25px auto;
-    box-shadow: 5px 5px 10px #c4e0f7;
+    box-shadow: 5px 5px 10px #1e272f;
     text-align: center;
     
 }
 .home-page-knots-background {
-    background-color:#023e8a;
+    background-image: linear-gradient(to right, rgba(196, 224, 247, .7), #09e1f3, rgba(196, 224, 247, .7));
     padding: 20px;
     grid-column: 1/6;
     margin: 50px;
@@ -141,26 +157,26 @@ body {
     border-radius: 25px;
 }
 .home-page-knots-background h1 {
-    background-color:#c4e0f7;
+    background-color:#023e8a;
     color: #fe9f00;
     border-radius: 25px;
     padding: 20px;
     width: 50%;
-    box-shadow: 5px 5px 10px #c4e0f7;
+    box-shadow: 5px 5px 10px #1e272f;
     margin: 25px auto;
     text-align: center;
 }
 .home-page-knots-background p {
-    color: #023e8a;
-    background-color:#c4e0f7;
+    color:white;
+    background-color:#023e8a;
     padding: 25px;
     border-radius: 25px;
-    box-shadow: 5px 5px 10px #c4e0f7;
+    box-shadow: 5px 5px 10px #1e272f;
     margin: 25px auto;
     text-align: center;
 }
 .home-page-beads-background {
-    background-color:#023e8a;
+    background-image: linear-gradient(to right, rgba(196, 224, 247, .7), #09e1f3, rgba(196, 224, 247, .7));
     padding: 20px;
     grid-column: 6/11;
     margin: 50px;
@@ -168,21 +184,21 @@ body {
     border-radius: 25px;
 }
 .home-page-beads-background h1 {
-    background-color:#c4e0f7;
+    background-color:#023e8a;
     color: #fe9f00;
     border-radius: 25px;
     padding: 20px;
     width: 50%;
-    box-shadow: 5px 5px 10px #c4e0f7;
+    box-shadow: 5px 5px 10px #1e272f;
     margin: 25px auto;
     text-align: center;
 }
 .home-page-beads-background p {
-    color: #023e8a;
-    background-color:#c4e0f7;
+    color: white;
+    background-color:#023e8a;
     padding: 25px;
     border-radius: 25px;
-    box-shadow: 5px 5px 10px #c4e0f7;
+    box-shadow: 5px 5px 10px #1e272f;
     margin: 25px auto;
     text-align: center;
 }
@@ -197,7 +213,7 @@ body {
     width: 200px;
 }
 footer {
-    background-color: #023e8a;
+    background-image: linear-gradient(to right, #023e8a, #023e8a, #09e1f3);
     color: white;
     padding: 5px;
     margin-top: 50px; 
@@ -235,18 +251,19 @@ footer p a:hover {
 .slideshow-container1, .slideshow-container2, .slideshow-container3,  .slideshow-container4, .slideshow-container5, .slideshow-container6 {
     max-width: 100%;
     position: relative;
-    background-color:#023e8a;
+    background-image: linear-gradient(to right, rgba(196, 224, 247, .7), #09e1f3, rgba(196, 224, 247, .7));
     padding: 25px;
     border-radius: 25px;
     margin: 50px;
 }
 
 .slideshow-container1 p, .slideshow-container2 p, .slideshow-container3 p,  .slideshow-container4 p, .slideshow-container5 p, .slideshow-container6 p {
-    color: #023e8a;
-    background-color:#c4e0f7;
+    color: #fe9f00;
+    font-size: 1cm;
+    background-color:#023e8a;
     padding: 25px;
     border-radius: 25px;
-    box-shadow: 5px 5px 10px #c4e0f7;
+    box-shadow: 5px 5px 10px #1e272f;
     margin: 25px auto;
     text-align: center;
 }
@@ -264,9 +281,9 @@ footer p a:hover {
   position: absolute;
   top: 50%;
   width: auto;
-  padding: 10px;
+  padding: 5px;
   margin-left: -26px;
-  color: #c4e0f7;
+  color: #001794;
   font-weight: bold;
   font-size: 35px;
   transition: 0.6s ease;
@@ -285,7 +302,8 @@ footer p a:hover {
 }
 /* Caption text */
 .text {
-  color: #fe9f00;
+  color: #023e8a;
+  font-weight: bold;
   font-size: 35px;
   padding: 20px 20px;
   position: top;
@@ -308,13 +326,13 @@ footer p a:hover {
   height: 15px;
   width: 15px;
   margin-bottom: -50px;
-  background-color: #bbb;
+  background-color:#001794;
   border-radius: 50%;
   display: inline-block;
   transition: background-color 0.6s ease;
 }
 .active, .dot1:hover, .dot2:hover, .dot3:hover, .dot4:hover, .dot5:hover, .dot6:hover {
-  background-color: #717171;
+  background-color:#fe9f00;
 }
 /* Fading animation */
 .fade {
@@ -343,10 +361,16 @@ footer p a:hover {
     height: auto;
 }    
 }
-nav, footer {
+.sticky {
+    position:relative;
+    display:list-item;
+    width: 100%;
+    
+  }
+#navbar, footer {
     flex-direction: column;
 }
-nav a {
+#navbar a {
     display: block;
     padding: 15px;
 }
