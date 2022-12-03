@@ -9,11 +9,11 @@ Fonts are separated by a & */
     margin: 0 auto;
     padding: 0px;
 }
-#logo {
-    margin:0 auto;
+.logo {
+    display: inline-block;
 }
-#logo_link {
-    margin:0 auto;
+.logo_link {
+    display: inline-block;
 }
 #navbar {
     overflow: hidden;
@@ -21,22 +21,19 @@ Fonts are separated by a & */
     color: white; 
     display:block;
     opacity: .9;
-    padding: 20px;
     white-space: nowrap;
-    
 }
-
 .button {
     border-style: outset;
     border-color: #09e1f3;
     background-color: #023e8a;
-    padding: 5px;
+    padding: 10px;
 }
 #navbar a {
     text-align: center;
     color: white;
     text-decoration: none;
-    margin: 80px;
+    margin: 50px;
     vertical-align: middle;
     
 }
@@ -48,7 +45,7 @@ Fonts are separated by a & */
 .sticky {
     position: fixed;
     display: block;
-    width: 1560px;
+    width: 1600px;
     z-index: 10;
     margin-top: -35px;
     
