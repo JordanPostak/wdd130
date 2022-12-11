@@ -1,39 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <link rel="icon" href="./images/postakcreations-logo.png">
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>"Postak Creations | Postak Creations Jewelry | Contact Us"</title>
+        <title>"Postak Creations | Postak Creations Jewelry | Beads"</title>
         <link rel="stylesheet" href="styles/style.css">
+        <style>
+            .parallax {
+            /* The image used */
+            background-image: url("./images/creation-background.jpg");
+            /* Set a specific height */
+            min-height: 500px; 
+            /* Create the parallax scrolling effect */
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            }
+        </style>
     </head>
-    <body>
+    <body class="parallax">
         <div id="content">
-            <header>
+            <div id="navbar">
                 <a id="logo_link" href="index.html">
-                <img class="logo" src="images/postakcreations-logo.png" alt="Rapid Paradise Image"/>
+                <img class="logo" src="images/postakcreations-logo.png" alt="Postak Creations logo"/>
                 </a>
-                <nav>
-                    <a href="index.html" target="_blank">Home</a> 
-                    <a href="knots.html" target="_blank">Knots</a>
-                    <a href="beads.html" target="_blank">Beads</a>
-                    <a href="contact.html" target="_blank">Contact Us</a>
-                </nav>
-            </header>
-            <div id="contact">
-                <div id="contact-box">
-                    <img id="contact-img" src="images/Postak Creations logo.jpg" alt="River panoramic">
-                </div>
-                <section id="contact-title-msg">
-                    <h1 class="contact-title"> Postak Creations Contact Us Page</h1>
-                    <h4>Send us an email!</h4>
-                </section>
+                <a class="button" href="index.html">Home</a> 
+                <a class="button" href="knots.html">Knots</a>
+                <a class="button" href="beads.html">Beads</a>
+                <a class="button" href="contact.html">Contact Us</a>
             </div>
             <main class="contact-grid">
                 <section class="contact-msg">
                     <h2>Contact Us</h2>
                     <p>Have specific requests or compliments for us? No problem, send us a message below!</p>
-                    <div id="feedback"></div>
                     <form action="/my-handling-form-page" method="post">
                         <ul>
                           <li>
@@ -48,12 +50,13 @@
                             <label for="msg">Message:</label>
                             <textarea id="msg" name="user_message"></textarea>
                           </li>
-                          <li class="button">
+                          <li>
                             <button type="submit">Send your message</button>
                           </li>
                         </ul>
+                        <div id="feedback"></div>
                       </form>
-                      <script>
+                      <script> 
                         // get the feedback div element so we can do something with it.
                         const feedbackElement = document.getElementById('feedback');
                         // get the form so we can read what was entered in it.
@@ -66,12 +69,26 @@
                             feedbackElement.innerHTML = 'Hello '+ formElement.user_name.value +'! Thank you for your message. We will get back with you as soon as possible!';
                             // make the feedback element visible.
                             feedbackElement.style.display = "block";
-                            // add a class to move everything down so our message doesn't cover it.
-                            document.body.classList.toggle('moveDown');
+                            var blink_speed = 1000; // every 1000 == 1 second, adjust to suit
+                            var t = setInterval(function () {
+                                var ele = document.getElementById('feedback');
+                                ele.style.visibility = (ele.style.visibility == 'hidden' ? '' : 'hidden');
+                            }, blink_speed);
                             });
                     </script>  
-                    <p>Thank you for contacting us.</p>
                 </section>
+                <script>
+                    window.onscroll = function() {myFunction()};
+                    var navbar = document.getElementById("navbar");
+                    var sticky = navbar.offsetTop;
+                    function myFunction() {
+                        if (window.pageYOffset >= sticky) {
+                        navbar.classList.add("sticky")
+                        } else {
+                        navbar.classList.remove("sticky");
+                        }
+                    }
+                </script>
             </main>
             <footer>
                 <p>Postak Creations &copy; 2022 - Jordan Postak</p>
