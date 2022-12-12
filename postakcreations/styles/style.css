@@ -177,8 +177,8 @@ body {
 }
 form {
     /* Center the form on the page */
-    margin: 0 auto;
-    width: 0 auto;
+    margin: auto;
+    width: auto;
     text-align: center;
     /* Form outline */
     background-color: #023e8a;
@@ -269,7 +269,6 @@ button:focus {
         color: #001794;
         box-shadow: 5px 5px 10px #1e272f;
         font: bold 0.8em "IM Fell French Canon", Lato;
-        position: block;
         padding: 20px;
         margin: 40px;
         border-radius: 25px;
