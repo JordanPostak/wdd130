@@ -514,5 +514,64 @@ footer {
 }
 .prev {
     margin-left: -15px;
-  }
+}
+.home-page-background, .knots-page-msg, .beads-page-msg, .contact-msg {
+    padding: 15px;
+    margin: 15px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+}
+.home-page-background p, .knots-page-msg p, .beads-page-msg p, .contact-msg p{
+    margin: 20px;
+    text-align: center;
+    font-size: 15px;
+
+}
+.home-page-background h2, .knots-page-msg h2, .beads-page-msg h2, .contact-msg h2{
+    padding: 15px;
+    width: 75%;
+    margin: 25px auto;
+    font-size: 20px;
+} 
+.home-page-knots-background h1{
+    font-size: 20px;
+}
+.home-page-knots-background p{
+    font-size: 15px;
+}
+.home-page-beads-background h1{
+    font-size: 20px;
+}
+.home-page-beads-background p{
+    font-size: 15px;
+}
+#name{
+    width: 150px;
+    font-size: 15px;
+}
+#name{
+    width: 150px;
+    font-size: 15px;
+}
+#mail{
+    width: 150px;
+    font-size: 15px;
+}
+#msg{
+    width: 150px;
+    font-size: 15px;
+}
+button{
+    font-size: 8px;
+}
+button:hover, .button:focus{
+    font-size: 10px;
+}
+#feedback{
+    font-size: 8px;
+    padding: 10px;
+    margin: 10px;
+}
+
 }
