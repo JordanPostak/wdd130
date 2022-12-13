@@ -574,18 +574,22 @@ footer {
     width: 150px;
     font-size: 15px;
 }
-.button:hover,
-.button:focus,
-.button:active{
-    font-size: 25px;
-}
 .button{
     font-size: 20px;
+}
+.button:hover,
+.button:focus{
+    font-size: 25px;
+}
+.button:active{
+    color: #fe9f00;
+    background: #001794;
+    font-size: 25px;
 }
 button{
     font-size: 8px;
 }
-button:hover, .button:focus{
+button:hover, button:focus{
     font-size: 10px;
 }
 #feedback{
