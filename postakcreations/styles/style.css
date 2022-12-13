@@ -451,10 +451,10 @@ footer p a:hover {
     position:relative;
     display:list-item;
     width: 100%;
-    
   }
 #navbar, footer {
     flex-direction: column;
+    font-size: 15px;
 }
 #navbar a {
     display: block;
@@ -473,10 +473,16 @@ footer p a:hover {
     font-size: 25px;
     transform: rotate(23deg);
 }
-.home-page-background, .home-page-knots-background, .home-page-beads-background {
-    width: 80%;
+.home-page-background {
+    width: auto;
     display: block;
     margin: 0 auto;
+}
+.home-page-knots-background, .home-page-beads-background {
+    width: auto;
+    display: block;
+    margin: 15px;
+    margin-bottom: 20px;
 }
 footer {
     margin-top: 25px;
@@ -562,6 +568,13 @@ footer {
     width: 150px;
     font-size: 15px;
 }
+.button:hover,
+.button:focus{
+    font-size: 25px;
+}
+.button{
+    font-size: 20px;
+}
 button{
     font-size: 8px;
 }
@@ -572,6 +585,12 @@ button:hover, .button:focus{
     font-size: 8px;
     padding: 10px;
     margin: 10px;
+}
+#home-page-collage{
+    margin-top: 40px;
+}
+.logo {
+    margin: 0px;
 }
 
 }
